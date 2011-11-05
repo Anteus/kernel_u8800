@@ -91,7 +91,7 @@ typedef  struct _usbsdms_read_toc_cmd_type
    u8  control;
 } usbsdms_read_toc_cmd_type;
 /*
-When the mobile received rewind¡¯SCSI command, (it's bCBWCBLength is 0),
+When the mobile received rewindï¿½ï¿½SCSI command, (it's bCBWCBLength is 0),
 the usb composition should switch from ONLY_CDROM to multiport composition, 
 and their PIDs should be different. 
 
@@ -100,15 +100,15 @@ format: 0x11 0x06  <PC_type> <Timeout> <PID>
 0x11: main SCSI command
 0x06: indicate this is an extended SCSI command, should not conflict with protocol 
 <PC_type> OS type
-     0x00£º Windows(default)
+     0x00ï¿½ï¿½ Windows(default)
      0x01:  win98 
      0x02:  win2K 
      0x03:  xp 
      0x04:  vista32 
      0x05:  vista64
-     0x10£º Mac OS X 
-     0x20£º Linux
-     0x30£º gateway
+     0x10ï¿½ï¿½ Mac OS X 
+     0x20ï¿½ï¿½ Linux
+     0x30ï¿½ï¿½ gateway
      
 <Timeout> how long should be wait to execute the real usb switching. unit is second. 
     0:          execute switching immediately
@@ -195,6 +195,7 @@ typedef struct _usb_pid_stru
 
     /* new requirement: usb tethering */
     u16     wlan_pid;
+    u16     unther_pid;
 }usb_pid_stru;
 
 extern usb_pid_stru *curr_usb_pid_ptr;
